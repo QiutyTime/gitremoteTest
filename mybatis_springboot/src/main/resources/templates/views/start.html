@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owsome</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="b">
+    <table width="335" height="309" border="1" align="center">
+        <tr>
+            <td colspan="2"><h1 align="center">计算器</h1></td>
+        </tr>
+        <tr>
+            <td width="113">第一个数字</td>
+            <td width="210">
+                <input name="firstNumber" type="text" id="textfield" size="30" /></td>
+        </tr>
+        <tr>
+            <td>符号</td>
+            <td><input type="radio" name="radio" id="radio" value="1" />
+                <label for="radio">+
+                    <input type="radio" name="radio" id="radio2" value="2" />
+                    -</label>
+                <input type="radio" name="radio" id="radio3" value="3" />
+                <label for="radio3">*</label>
+                <input type="radio" name="radio" id="radio4" value="4" />
+                <label for="radio4">/</label>
+            </td>
+        </tr>
+        <tr>
+            <td>第二个数字</td>
+            <td><input name="secondNumber" type="text" id="textfield2" size="30" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div align="center">
+                <input type="submit" name="button" id="button" value="提交" />
+                <input type="reset" name="button2" id="button2" value="重置" />
+            </div></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
