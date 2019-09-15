@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+<!--针对Usedao接口的配置-->
+<!--通过mapper 将接口查到的数据，映射到实体类上去-->
+<!--注意包的结构和代码的包结构保持一致，应该是方便映射，具体原因我不知道-->
+<mapper namespace="com.dao.Iuserdao">
+    <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
+       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
+     -->
+    <!--//ID是接口里面的方法名字，不能出错-->
+    <!--//resultType 是映射到实体类，-->
+    <select id="findAll" resultType="com.domain.User">
+      select * from tb_user
+   </select>
+
+
+ <insert id="save" parameterType="com.domain.User">
+     insert into  tb_user (id ,user_name ,password ,name ,age ,sex ,created ,birthday ,updated)
+      value (#{id},#{user_name} ,#{password} ,#{name} ,#{age} ,#{sex} ,#{created} ,#{birthday} ,#{updated})
+
+ </insert>
+
+
+    <update id="update" parameterType="com.domain.User">
+        update tb_user set id=#{id} ,user_name=#{user_name} ,password=#{password} ,name=#{name} ,age=#{age} ,sex=#{sex} ,birthday= #{birthday} where id =#{id}
+    </update>
+
+
+    <delete id="delete" parameterType="String" >
+        delete from tb_user where id=#{id}
+    </delete>
+
+
+    <select id="findById" parameterType="String" resultType="com.domain.User">
+        select * from tb_user where id =#{id }
+    </select>
+
+    <select id="findByName" parameterType="String" resultType="com.domain.User">
+        select * from tb_user where  user_name like #{user_name }
+    </select>
+
+    <select id="findCount"  resultType="int">
+        select count(id) from tb_user
+    </select>
+</mapper>
