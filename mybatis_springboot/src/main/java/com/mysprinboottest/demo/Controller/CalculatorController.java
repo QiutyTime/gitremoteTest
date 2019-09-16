@@ -30,10 +30,8 @@ public class CalculatorController {
         cacl.setFirstnumber(firstNumber);
         cacl.setCharecer((int)radio);
         cacl.setSecondNuber(secondNumber);
-
         calculate cacu= new calculate();
         double anwser=cacu.calcu(cacl);
-
         map.put("answer", anwser);
         return "views/answer";
     }
